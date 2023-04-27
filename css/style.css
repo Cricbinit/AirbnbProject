@@ -1,0 +1,527 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: url("../fonts/Helvetica-Neue-Font/Helvetica\ Medium/");
+}
+
+/* css varibale */
+:root {
+  --primary-red-color: #ff385c;
+  --secondary-red-color: #e00b41;
+  --brown-and-red-color: #92174d;
+  --base-color: #efefef;
+  --base-white-color: #ffffff;
+  --base-gray-color: #eeee;
+  --base-black-color: #222222;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif;
+  font-family: "Roboto", sans-serif;
+  background: var(--base-white-color);
+}
+/* 1st top top div */
+#_top_navbar_section {
+  background-color: var(--base-gray-color);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+}
+
+#_top_navbar_section > article {
+  padding-top: 10px;
+}
+
+/* change the link color */
+/* i am targeting a hyper link */
+#_top_navbar_section a {
+  text-decoration: none;
+  color: var(--primary-red-color);
+  border-bottom: 2px solid var(--base-black-color);
+}
+
+/* top navbar ends here */
+
+/* <!-- NAVBAR SECTION STARTS HERE --> */
+#_navbar_section {
+  height: 80px;
+  background-color: var(--base-white-color);
+  border-bottom: 1px solid var(--base-gray-color);
+  border-top: 1px solid var(--base-gray-color);
+  z-index: 20;
+  position: relative;
+}
+/* search_conatiner design */
+#_navbar_section .container {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+  height: inherit;
+  align-items: center;
+  gap: 4%;
+}
+
+#_navbar_section .container .flex-item {
+  flex-basis: 32%;
+}
+
+/* change logo color */
+
+#_navbar_section .container .logo svg {
+  color: var(--primary-red-color);
+}
+
+.search_container {
+  background: #eee;
+  width: 100%;
+  display: flex;
+  height: 45px;
+  position: relative;
+  border-radius: 30px;
+  align-items: center;
+  border: 2px solid var(--base-gray-color);
+  box-shadow: 1px 1px 1px 1px;
+}
+
+#_navbar_section .container .search .search_container .item:nth-child(1) {
+  flex-basis: 30%;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid var(--base-white-color);
+}
+
+#_navbar_section .container .search .search_container .item:nth-child(2) {
+  flex-basis: 30%;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid var(--base-white-color);
+}
+
+#_navbar_section .container .search .search_container .item:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  flex-basis: 31%;
+}
+
+#_navbar_section .container .menu {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search .search_container span {
+  position: absolute;
+  background: red;
+  border-radius: 100%;
+  height: 30px;
+  top: 5px;
+  right: 8px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu > nav > ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+/* icons design */
+.menu > nav > ul > li > a {
+  padding: 10px 20px;
+  text-decoration: none;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  color: var(--base-black-color);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.menu > nav > ul > li > a:hover {
+  background: #efef;
+}
+
+.menu > nav > ul > li:last-child > a {
+  height: 40px;
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+}
+
+.menu > nav > ul > li:last-child a div.icons {
+  height: 40px;
+  width: 75px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  border-radius: 66px;
+  z-index: 1;
+}
+
+/* users icon design */
+.menu > nav > ul > li:last-child div.icons .users {
+  background: #555;
+  color: #fff;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu > nav > ul > li {
+  position: relative;
+}
+.dropdownMenu {
+  letter-spacing: 1px;
+  background: #eee;
+  box-shadow: 1px 2px 6px 1px;
+  width: 250px;
+  height: auto;
+  padding: 10px;
+  position: absolute;
+  top: 52px;
+  right: 0;
+  border-radius: 10px;
+  /* visibility: visible; */
+  display: none;
+  z-index: 1;
+}
+
+.dropdownMenu ul {
+  list-style: none;
+}
+
+.dropdownMenu ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.dropdownMenu:first-child a {
+  display: none;
+}
+
+.dropdownMenu span.hr {
+  border: 1px solid #131212;
+  display: block;
+}
+
+.dropdownMenu ul li .active {
+  font-weight: 600;
+}
+
+/* mouse hovering */
+/* .dropdownMenu ul li a:hover {
+  background-color: white;
+} */
+
+/* mouse hovering by general sibling selector (~) */
+
+/* .menu > nav > ul > li a:hover ~ .dropdownMenu {
+  visibility: hidden;
+  opacity: 1;
+} */
+
+/* <!-- NAVBAR SECTION STARTS HERE --> */
+
+/* scroll starts here */
+#content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#content .container1 {
+  width: 90%;
+}
+
+#content .container1 {
+  display: flex;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--base-color);
+}
+
+#content .container1 .right {
+  width: 200px;
+  height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* #content .container1 .right button{
+  position: absolute;
+  display: flex;
+  height: px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px 15px 15px 15px;
+} */
+
+#content .container1 .right button {
+  background: var(--base-white-color);
+  height: 35px;
+  width: 30px;
+  border-radius: 100px;
+  opacity: 1px;
+  border: 2px solid black;
+}
+
+#content .container1 .right button a i {
+  color: var(--base-black-color);
+}
+
+#content .container1 .right .filter a i {
+  color: var(--base-black-color);
+}
+
+/* button hovering */
+#content .container1 .right .button:hover {
+  background: var(--base-gray-color);
+}
+
+#content .container1 .right .filter {
+  border: 2px solid var(--base-black-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 90px;
+  border-radius: 100px;
+  opacity: 1px;
+}
+
+#content .container1 .right .filter:hover {
+  background: var(--base-gray-color);
+}
+
+#content .container1 .scroll {
+  display: flex;
+  gap: 29px;
+  padding-left: 40px;
+}
+#content .container1 .scroll img {
+  height: 25px;
+  width: 25px;
+}
+#content .container1 .scroll p:hover {
+  border-bottom: 3px solid #131212;
+}
+
+#content .container1 .scroll p {
+  background-color: var(--base-white-color);
+  font-size: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #222222;
+}
+/* heart */
+#main .card-container .cards figure {
+  position: relative;
+}
+#main .card-container .cards figure .btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  stroke: var(--base-white-color);
+  stroke-width: 2;
+  overflow: visible;
+  height: 24px;
+  width: 24px;
+}
+
+/* main design start here */
+#main {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100%;
+}
+
+#main .card-container {
+  padding-top: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#main .card-container .cards figure a img {
+  height: 300px;
+  width: 300px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#main .card-container .cards header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 15px;
+}
+#main .card-container .cards header p {
+  gap: 4px;
+}
+
+#main .card-container .cards header h3 {
+  font-size: 20px;
+}
+
+#main .card-container .cards header p b {
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+/* heart  style*/
+
+/* footer design */
+#last-content {
+  align-items: center;
+  border-top: 1px solid var(--base-black-color);
+  display: flex;
+  justify-content: center;
+  background: var(--base-gray-color);
+  height: 50px;
+  width: 100%;
+}
+
+#last-content .last-container {
+  height: 50px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#last-content .last-container .leftside {
+  color: #555;
+  list-style: none;
+  height: 50px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#last-content .last-container .rightside {
+  color: #555;
+  list-style: none;
+  height: 50px;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#last-content .last-container .leftside li a {
+  text-decoration: none;
+  color: var(--base-black-color);
+}
+
+#last-content .last-container .rightside li a {
+  text-decoration: none;
+  color: var(--base-black-color);
+}
+
+/* Show map */
+#showmap .showbtn {
+  -webkit-box-pack: center !important;
+  -webkit-box-align: center !important;
+  appearance: none !important;
+  display: inline-flex !important;
+  border-radius: 24px !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  outline: none !important;
+  margin: 0px !important;
+  padding: 14px 19px 20px 20px !important;
+  color: var(--base-white-color) !important;
+  cursor: pointer !important;
+  touch-action: manipulation !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: none !important;
+  transition: -ms-transform 0.25s ease 0s, -webkit-transform 0.25s ease 0s,
+    transform 0.25s ease 0s !important;
+  background: rgb(34, 34, 34) !important;
+  font-size: 100%;
+}
+#showmap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navchild */
+
+#navchild {
+  width: 100%;
+  height: 80px;
+  background-color: var(--base-white-color);
+  position: absolute;
+  z-index: 2;
+  top: 60px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: flex; */
+}
+
+#navchild  .navchild1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navchild  .navchild1 ul button{
+  height: 50px;
+  width: 300px;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  display: inline;
+  background: var(--base-white-color);
+  border-radius: 10px 10px 10px 10px;
+}
+
+#navchild  .navchild1 ul button:hover{
+  background:var(--base-gray-color);
+  border-radius: 20px 20px 20px 20px;
+}
+
